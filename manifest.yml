@@ -1,0 +1,13 @@
+---
+applications:
+
+- name: demo-1
+  memory: 1024M
+  random-route: true
+  path: target/demo-1-0.0.1-SNAPSHOT.jar
+  buildpack: sap_java_buildpack
+  env:
+    JBP_CONFIG_SAPJVM_MEMORY_SIZES: "metaspace:96m.."
+    SAP_JWT_TRUST_ACL: '[{"clientid" : "*", "identityzone" : "*"}]'
+#  services:
+#  - your-uaa-service-instance
